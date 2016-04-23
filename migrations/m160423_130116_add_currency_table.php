@@ -8,7 +8,7 @@ class m160423_130116_add_currency_table extends Migration
     {
         $this->createTable('currency', [
             'id' => Schema::TYPE_PK,
-            'price' => Schema::TYPE_DECIMAL . ' NOT NULL',
+            'price' => 'decimal(10,4)	NOT NULL',
             'date_at' => Schema::TYPE_DATE,
             'currency_type_id' => Schema::TYPE_SMALLINT . ' NOT NULL REFERENCES currency_type(id)'
         ]);

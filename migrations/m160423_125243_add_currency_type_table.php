@@ -10,6 +10,14 @@ class m160423_125243_add_currency_type_table extends Migration
             'id' => Schema::TYPE_PK,
             'name' => Schema::TYPE_STRING . ' NOT NULL',
         ]);
+
+        $this->insert('currency_type', [
+          'name' => 'EUR',
+        ]);
+
+        $this->insert('currency_type', [
+          'name' => 'USD',
+        ]);
     }
 
     public function down()
