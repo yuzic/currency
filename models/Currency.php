@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use app\models\CurrencyType;
 
 /**
  * This is the model class for table "currency".
@@ -20,6 +21,11 @@ class Currency extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'currency';
+    }
+
+    public function getCurrencyType()
+    {
+        return $this->hasOne(CurrencyType::className(), ['id' => 'currency_type_id']);
     }
 
     /**

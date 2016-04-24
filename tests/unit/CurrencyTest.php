@@ -1,17 +1,27 @@
 <?php
-use app\components\providers\Cbr;
+use app\components\currency\Eur;
+use app\components\currency\Usd;
 
 class CurrencyTest extends \yii\codeception\TestCase
 {
     public $appConfig = '@tests/unit/_config.php';
 
-    public function testGetCurrencyTest()
+    public function testGetCurrencyEurTest()
     {
-        $provider = new Cbr($this->getConfig('url'));
-        $dt = date("d.m.Y");
-        $list = $provider->getCurrency($dt);
-        $this->assertArrayHasKey('USD', $list);
+        $currency = new Eur();
+        $price = $currency->getCurrent('2016-03-09');
+
+        $this->assertEquals('80.1161', $price);
     }
+
+    public function testGetCurrencyUsdTest()
+    {
+        $currency = new Usd();
+        $price = $currency->getCurrent('2016-03-09');
+
+        $this->assertEquals('73.1854', $price);
+    }
+
 
 
     protected function getConfig($key)
