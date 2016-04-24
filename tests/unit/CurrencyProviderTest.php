@@ -5,7 +5,7 @@ class CurrencyProviderTest extends \yii\codeception\TestCase
 {
     public $appConfig = '@tests/unit/_config.php';
 
-    public function testGetDataFromProviderTest()
+    public function testGetDataFromProvider()
     {
         $provider = new Cbr($this->getConfig('url'));
         $dt = date("d.m.Y");

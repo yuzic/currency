@@ -23,6 +23,15 @@ CREATE TABLE IF NOT EXISTS `currency` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
+CREATE TABLE IF NOT EXISTS `orders` (
+  `id` int(11) NOT NULL,
+  `price` decimal(10,4) NOT NULL,
+  `date_at` date DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
 
 INSERT INTO `currency` (`id`, `price`, `date_at`, `currency_type_id`) VALUES
 (1, 80.1161, '2016-03-09', 1),

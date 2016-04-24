@@ -2,7 +2,6 @@
 namespace app\components\behaviors;
 use yii\db\ActiveRecord;
 use yii\base\Behavior;
-use yii\web\HttpException;
 use Yii;
 
 class Currency extends Behavior
@@ -17,25 +16,25 @@ class Currency extends Behavior
      */
     public $to = null;
 
-    public $fieldName = 'balance';
+    public $fieldName = 'price';
 
     public function events()
     {
         return [
-            ActiveRecord::EVENT_BEFORE_INSERT => 'beforeInsert',
+            ActiveRecord::EVENT_BEFORE_VALIDATE => 'beforeInsert',
         ];
     }
 
 
     public function beforeInsert($event)
     {
-        if ($this->fieldName === null) {
+        if ($this->fieldName !== null) {
             $balance = $this->from / $this->to;
-            $this->owner->{$this->fieldName} = $balance;
+            $this->owner->price= $balance;
             $event->isValid = true;
             return true;
         }
-        $this->owner->addError('uploadFile', Yii::t('Site', 'Unable to save model'));
+        $this->owner->addError('save error', Yii::t('Site', 'Unable to save model'));
         $event->isValid = false;
         return false;
     }
