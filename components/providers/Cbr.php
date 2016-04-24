@@ -12,10 +12,10 @@ class Cbr
 
     public function getCurrency($day)
     {
-      $xml = new \DOMDocument();
-      $list = [];
-      $url  = $this->getUrl() . $day;
-       if (@$xml->load($url)) {
+        $xml = new \DOMDocument();
+        $list = [];
+        $url  = $this->getUrl() . $day;
+        if (@$xml->load($url)) {
            $root = $xml->documentElement;
            $items = $root->getElementsByTagName('Valute');
            foreach ($items as $item) {
@@ -25,14 +25,14 @@ class Cbr
            }
 
            return $list;
-       }
+        }
 
-       return false;
+        return false;
 
      }
 
-     public function getUrl()
-     {
-       return $this->url;
-     }
+    public function getUrl()
+    {
+        return $this->url;
+    }
 }
