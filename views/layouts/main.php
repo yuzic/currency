@@ -27,17 +27,28 @@ AppAsset::register($this);
 <div class="wrap">
 
     <div class="container">
-        Write some text in textbox:
-        <input type="text" ng-model="sometext" />
-
-        <h1 ng-show="sometext">Hello {{ sometext }}</h1>
-
-
         <div  ng-controller="myCtrl">
 
-            <button ng-click="myFunction()">Click Me!</button>
+            <button ng-click="myFunction()">Show currency</button>
 
-            <p>{{ count }}</p>
+
+
+            <table class="talbe table-bordered" width="50%">
+                <thead>
+                    <tr>
+                        <th>Price</th>
+                        <th>Currency</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="document in documents">
+                        <td>{{document.price}}</td>
+                        <td>{{document.currency}}</td>
+                        <td>{{document.date_at}}</td>
+                    </tr>
+                </tbody>
+             </table>
         </div>
 
         <div ng-view></div>

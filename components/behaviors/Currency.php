@@ -29,6 +29,7 @@ class Currency extends Behavior
     public function beforeInsert($event)
     {
         if ($this->fieldName !== null) {
+            //for exchange cource
             $balance = $this->from / $this->to;
             $this->owner->price= $balance;
             $event->isValid = true;

@@ -23,6 +23,11 @@ class Currency extends \yii\db\ActiveRecord
         return 'currency';
     }
 
+    public function active($state = true)
+    {
+        return $this->andWhere(['active' => $state]);
+    }
+
     public function getCurrencyType()
     {
         return $this->hasOne(CurrencyType::className(), ['id' => 'currency_type_id']);

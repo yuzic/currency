@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "744313b9e0e9d5720d438950c3d249c1",
-    "content-hash": "5416ee193594dfc4a376c160917a4625",
+    "hash": "e645ab858d1ccf552b9d24ed90844502",
+    "content-hash": "59d2cc8bec89d030cbb4f678a5227406",
     "packages": [
         {
             "name": "bower-asset/angular",
@@ -28,6 +28,55 @@
             },
             "license": [
                 "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/angular-chart",
+            "version": "v0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GraFiddle/angular-chart.git",
+                "reference": "97ba76b8f1c2594c1353925879c97799e5921f6c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GraFiddle/angular-chart/zipball/97ba76b8f1c2594c1353925879c97799e5921f6c",
+                "reference": "97ba76b8f1c2594c1353925879c97799e5921f6c",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": ">1.3.0",
+                "bower-asset/c3": "~0.4.0"
+            },
+            "require-dev": {
+                "bower-asset/angular-mocks": ">1.3.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "angular-chart.js"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "bower_components",
+                    "test",
+                    "debug",
+                    "Gruntfile.js",
+                    "package.json"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "AngularJS directive for adjustable dynamically updating c3 charts.",
+            "keywords": [
+                "angular",
+                "angularJS",
+                "c3",
+                "chart",
+                "charts",
+                "d3"
             ]
         },
         {
@@ -155,6 +204,87 @@
                 "responsive",
                 "web"
             ]
+        },
+        {
+            "name": "bower-asset/c3",
+            "version": "0.4.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/masayuki0812/c3.git",
+                "reference": "e83d0e78fa0881dc57934edc74cac16f4c6e1523"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/masayuki0812/c3/zipball/e83d0e78fa0881dc57934edc74cac16f4c6e1523",
+                "reference": "e83d0e78fa0881dc57934edc74cac16f4c6e1523",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/d3": "<=3.5.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "c3.css",
+                    "c3.js"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "bower_components",
+                    "htdocs",
+                    "spec",
+                    "src",
+                    "package.json",
+                    "component.json",
+                    "Gruntfile.*"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "D3-based reusable chart library",
+            "keywords": [
+                "chart",
+                "d3"
+            ]
+        },
+        {
+            "name": "bower-asset/d3",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mbostock-bower/d3-bower.git",
+                "reference": "4c0c34cf220f671febe8c3538fa82134c429ef9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mbostock-bower/d3-bower/zipball/4c0c34cf220f671febe8c3538fa82134c429ef9b",
+                "reference": "4c0c34cf220f671febe8c3538fa82134c429ef9b",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "d3.js",
+                "bower-asset-ignore": [
+                    ".DS_Store",
+                    ".git",
+                    ".gitignore",
+                    ".npmignore",
+                    ".spmignore",
+                    ".travis.yml",
+                    "Makefile",
+                    "bin",
+                    "component.json",
+                    "composer.json",
+                    "index.js",
+                    "lib",
+                    "node_modules",
+                    "package.json",
+                    "src",
+                    "test"
+                ]
+            }
         },
         {
             "name": "bower-asset/jquery",
