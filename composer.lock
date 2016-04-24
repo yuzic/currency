@@ -4,9 +4,109 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "211df4b51a6828fd0c1c7910c7187bc6",
-    "content-hash": "19576f0b8769e10287d5459d6392593a",
+    "hash": "744313b9e0e9d5720d438950c3d249c1",
+    "content-hash": "5416ee193594dfc4a376c160917a4625",
     "packages": [
+        {
+            "name": "bower-asset/angular",
+            "version": "v1.5.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular/bower-angular.git",
+                "reference": "cd353693d20736baa44fb44f65f8f573ef6e8e18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular/zipball/cd353693d20736baa44fb44f65f8f573ef6e8e18",
+                "reference": "cd353693d20736baa44fb44f65f8f573ef6e8e18",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./angular.js",
+                "bower-asset-ignore": []
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/angular-route",
+            "version": "v1.5.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular/bower-angular-route.git",
+                "reference": "642a2dfc05f869f4a56733e182393536184ed4fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular-route/zipball/642a2dfc05f869f4a56733e182393536184ed4fa",
+                "reference": "642a2dfc05f869f4a56733e182393536184ed4fa",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": "1.5.5"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./angular-route.js",
+                "bower-asset-ignore": []
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "bower-asset/angular-strap",
+            "version": "v2.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mgcrea/angular-strap.git",
+                "reference": "281e1aad671ab2afe849c1ee58b5f30a3b3386af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mgcrea/angular-strap/zipball/281e1aad671ab2afe849c1ee58b5f30a3b3386af",
+                "reference": "281e1aad671ab2afe849c1ee58b5f30a3b3386af",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": ">=1.2.21,<2.0.0"
+            },
+            "require-dev": {
+                "bower-asset/angular-animate": "~1.5",
+                "bower-asset/angular-i18n": "~1.5",
+                "bower-asset/angular-mocks": "~1.5",
+                "bower-asset/angular-motion": ">=0.4.3,<0.5.0",
+                "bower-asset/angular-route": "~1.5",
+                "bower-asset/angular-sanitize": "~1.5",
+                "bower-asset/angular-scenario": "~1.5",
+                "bower-asset/bootstrap": ">=3.3.6,<4.0.0",
+                "bower-asset/bootstrap-additions": ">=0.3.1,<0.4.0",
+                "bower-asset/fastclick": ">=1.0.6,<2.0.0",
+                "bower-asset/font-awesome": ">=4.5.0,<5.0.0",
+                "bower-asset/highlightjs": ">=9.1.0,<10.0.0",
+                "bower-asset/jquery": ">=2.2.0,<3.0.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "dist/angular-strap.js",
+                    "dist/angular-strap.tpl.js"
+                ],
+                "bower-asset-ignore": [
+                    "docs",
+                    "test",
+                    "tasks",
+                    "CONTRIBUTING.md"
+                ]
+            },
+            "description": "AngularStrap - AngularJS directives for Bootstrap",
+            "keywords": [
+                "angular",
+                "bootstrap"
+            ]
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.5",

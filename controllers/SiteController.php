@@ -47,6 +47,12 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionList()
+    {
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        return 1;
+    }
+
     public function actionIndex()
     {
         return $this->render('index');
